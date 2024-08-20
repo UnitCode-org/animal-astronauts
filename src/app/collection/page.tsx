@@ -1,10 +1,9 @@
 import Layout from "@/components/layouts/Layout";
-import Hero from "../components/Home/Hero";
 
-export default function Home() {
+export default function Collection() {
   return (
     <Layout>
-      <Hero />
+      <div>Collection</div>
     </Layout>
   );
 }

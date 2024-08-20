@@ -16,7 +16,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${outfit.variable}`}>
+    <html
+      lang="en"
+      className={`${inter.variable} ${outfit.variable} overflow-x-hidden scroll-smooth bg-unit-blue-50`}
+    >
       <body>{children}</body>
     </html>
   );

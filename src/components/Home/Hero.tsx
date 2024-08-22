@@ -22,7 +22,7 @@ function Hero() {
         alt="lightbeam"
         layout="fill"
         objectFit="contain"
-        className="absolute z-20 scale-[3] md:scale-[2] 3xl:scale[2] origin-center animate-pulse-slow"
+        className="absolute z-20 scale-[3] md:scale-[2] origin-center animate-pulse-slow"
         priority={true}
         quality={100}
       />

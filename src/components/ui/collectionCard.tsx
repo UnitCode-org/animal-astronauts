@@ -20,7 +20,7 @@ const CollectionCard: React.FC<CollectionCardProps> = ({
   variant = "default",
   className,
 }) => {
-  const baseClasses = "bg-unit-gray-20 rounded-2xl h-fit";
+  const baseClasses = "bg-unit-gray-20 rounded-3xl h-fit";
   const sizeClasses =
     variant === "large" ? "w-56 sm:w-80 md:w-56 lg:w-72" : "w-56";
 
@@ -31,7 +31,7 @@ const CollectionCard: React.FC<CollectionCardProps> = ({
         alt={name}
         width={200}
         height={200}
-        className="rounded-2xl w-full"
+        className="rounded-3xl w-full"
       />
       <div className="flex items-center justify-between gap-2">
         <h3 className="text-left py-2 pl-4 text-sm md:text-base">{name}</h3>

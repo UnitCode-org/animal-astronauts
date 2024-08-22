@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { Button } from "../ui/button";
-import Card from "../ui/collectionCard";
 import useEmblaCarousel from "embla-carousel-react";
 import Link from "next/link";
 import CollectionCard from "../ui/collectionCard";
@@ -24,7 +23,7 @@ function About() {
         className="w-full absolute z-20"
       />
       <div className="flex justify-center z-30 px-6 md:px-0">
-        <div className="bg-unit-gray-30 p-8 md:p-12 rounded-2xl text-center w-full max-w-[850px] relative z-30 mx-6 md:mx-16 lg:mx-0">
+        <div className="bg-unit-gray-30 p-8 md:p-12 rounded-3xl text-center w-full max-w-[850px] relative z-30 mx-6 md:mx-16 lg:mx-0">
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold font-outfit mb-4">
             Join the Odyssey
           </h1>
@@ -65,21 +64,21 @@ function About() {
             </div>
           </div>
           <div className="hidden md:flex gap-x-6 lg:gap-x-8 justify-center relative -mx-20">
-            <Card
+            <CollectionCard
               image="moe-new-york-3"
               name="Moe in New York"
               number="1"
               variant="large"
               className="relative z-30 -ml-12"
             />
-            <Card
+            <CollectionCard
               image="moe-new-york"
               name="Moe in New York"
               number="2"
               variant="large"
               className="relative z-30 md:-translate-y-8"
             />
-            <Card
+            <CollectionCard
               image="moe-new-york-2"
               name="Moe in New York"
               number="3"

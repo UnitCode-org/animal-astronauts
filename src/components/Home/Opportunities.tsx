@@ -12,7 +12,7 @@ function Opportunities() {
   });
 
   return (
-    <section className="z-20 relative max-w-screen-2xl w-full md:px-16 my-36">
+    <section className="z-20 relative max-w-screen-2xl w-full md:px-16 mt-36 mb-48">
       <Image
         src="/images/decoration/stars.svg"
         alt="stars"

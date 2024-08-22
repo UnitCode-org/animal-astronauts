@@ -70,11 +70,13 @@ function Steps() {
               Exclusive Membership
             </h4>
             <p className="text-unit-gray-10 text-center lg:text-start text-sm lg:text-base">
-              You're not just joining a club—you're becoming part of a
-              close-knit group of 360 individuals who are redefining what's
-              possible. This is your chance to connect with like-minded
-              pioneers, engage in high-level conversations, and unlock doors to
-              opportunities that can propel you to new heights.
+              <span className="font-semibold">
+                You're not just joining a club—
+              </span>
+              you're becoming part of a close-knit group of 360 individuals who
+              are redefining what's possible. This is your chance to connect
+              with like-minded pioneers, engage in high-level conversations, and
+              unlock doors to opportunities that can propel you to new heights.
             </p>
           </div>
         </div>

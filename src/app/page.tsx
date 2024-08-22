@@ -12,7 +12,7 @@ export default function Home() {
       <About />
       <Steps />
       <Opportunities />
-      {/* <Apply /> */}
+      <Apply />
     </Layout>
   );
 }

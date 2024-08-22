@@ -1,7 +1,7 @@
 import Image from "next/image";
 import clsx from "clsx";
 
-type CardProps = {
+type CollectionCardProps = {
   image: string;
   name: string;
   number: string;
@@ -13,7 +13,7 @@ function cn(...classes: (string | undefined)[]) {
   return clsx(classes);
 }
 
-const Card: React.FC<CardProps> = ({
+const CollectionCard: React.FC<CollectionCardProps> = ({
   image,
   name,
   number,
@@ -43,4 +43,4 @@ const Card: React.FC<CardProps> = ({
   );
 };
 
-export default Card;
+export default CollectionCard;

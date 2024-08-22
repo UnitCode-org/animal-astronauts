@@ -41,7 +41,7 @@ function Hero() {
         className="absolute h-auto -left-20 md:left-0 top-80 md:top-1/2 z-10 size-[200px] md:size-[300px] xl:size-[500px]"
       />
 
-      <div className="mb-32 lg:mb-0 text-center px-8 z-30">
+      <div className="mb-32 lg:mb-0 text-center px-4 z-30">
         <h5 className="mb-4 text-lg md:text-xl lg:text-2xl font-outfit">
           From Unit Network
         </h5>

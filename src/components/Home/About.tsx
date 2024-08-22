@@ -2,9 +2,10 @@
 
 import Image from "next/image";
 import { Button } from "../ui/button";
-import Card from "../ui/card";
+import Card from "../ui/collectionCard";
 import useEmblaCarousel from "embla-carousel-react";
 import Link from "next/link";
+import CollectionCard from "../ui/collectionCard";
 
 function About() {
   const [emblaRef] = useEmblaCarousel({
@@ -14,7 +15,7 @@ function About() {
   });
 
   return (
-    <div className="z-20 relative max-w-screen-2xl w-full -mt-32 lg:mt-0">
+    <section className="z-20 relative max-w-screen-2xl w-full -mt-32 lg:mt-0">
       <Image
         src="/images/decoration/stars.svg"
         alt="stars"
@@ -27,7 +28,7 @@ function About() {
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold font-outfit mb-4">
             Join the Odyssey
           </h1>
-          <p className="text-sm lg:text-base max-w-[500px] mb-12 md:mb-20 mx-auto">
+          <p className="text-sm lg:text-base max-w-[500px] mb-12 md:mb-20 mx-auto text-unit-gray-10">
             With only 360 unique Animal Astronaut NFTs, each representing a day
             of the year, securing yours today grants you exclusive access to the
             Astronaut Alliance Club.
@@ -35,7 +36,7 @@ function About() {
           <div className="embla md:hidden" ref={emblaRef}>
             <div className="flex">
               <div className="flex-shrink-0 px-4">
-                <Card
+                <CollectionCard
                   image="moe-new-york-3"
                   name="Moe in New York"
                   number="1"
@@ -44,7 +45,7 @@ function About() {
                 />
               </div>
               <div className="flex-shrink-0 px-4">
-                <Card
+                <CollectionCard
                   image="moe-new-york"
                   name="Moe in New York"
                   number="2"
@@ -53,7 +54,7 @@ function About() {
                 />
               </div>
               <div className="flex-shrink-0 px-4">
-                <Card
+                <CollectionCard
                   image="moe-new-york-2"
                   name="Moe in New York"
                   number="3"
@@ -97,7 +98,7 @@ function About() {
           </Link>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

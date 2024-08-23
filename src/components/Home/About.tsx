@@ -1,12 +1,18 @@
 "use client";
 
-import Image from "next/image";
 import { Button } from "../ui/button";
 import useEmblaCarousel from "embla-carousel-react";
 import Link from "next/link";
 import CollectionCard from "../ui/collectionCard";
+import { useScroll } from "@/context/ScrollContext";
 
 function About() {
+  const { aboutRef } = useScroll() ?? {
+    aboutRef: null,
+    scrollToHero: () => {},
+    scrollToAbout: () => {},
+  };
+
   const [emblaRef] = useEmblaCarousel({
     loop: true,
     align: "center",
@@ -14,14 +20,11 @@ function About() {
   });
 
   return (
-    <section className="z-20 relative max-w-screen-2xl w-full -mt-32 lg:mt-0">
-      <Image
-        src="/images/decoration/stars.svg"
-        alt="stars"
-        layout="fill"
-        objectFit="cover"
-        className="w-full absolute z-20"
-      />
+    <section
+      ref={aboutRef}
+      id="about"
+      className="z-20 relative max-w-screen-2xl w-full -mt-32 lg:mt-0"
+    >
       <div className="flex justify-center z-30 px-6 md:px-0">
         <div className="bg-unit-gray-30 p-8 md:p-12 rounded-3xl text-center w-full max-w-[850px] relative z-30 mx-6 md:mx-16 lg:mx-0">
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold font-outfit mb-4">

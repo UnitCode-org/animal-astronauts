@@ -1,15 +1,21 @@
+"use client";
+
+import { useScroll } from "@/context/ScrollContext";
 import Image from "next/image";
+import CountUp from "react-countup";
 
 function Hero() {
+  const { heroRef } = useScroll() ?? {
+    heroRef: null,
+    scrollToHero: () => {},
+    scrollToAbout: () => {},
+  };
+
   return (
-    <section className="relative flex w-full items-center justify-center min-h-screen">
-      <Image
-        src="/images/decoration/stars.svg"
-        alt="stars"
-        layout="fill"
-        objectFit="cover"
-        className="w-full absolute z-0"
-      />
+    <section
+      ref={heroRef}
+      className="relative flex w-full items-center justify-center min-h-screen"
+    >
       <Image
         src="/images/hero/main-glow.svg"
         alt="lightbeam"
@@ -20,9 +26,8 @@ function Hero() {
       <Image
         src="/images/hero/lightbeam.svg"
         alt="lightbeam"
-        layout="fill"
-        objectFit="contain"
-        className="absolute z-20 scale-[3] md:scale-[2] origin-center animate-pulse-slow"
+        fill
+        className="absolute z-20 scale-[3] md:scale-[2] origin-center animate-pulse-slow object-contain"
         priority={true}
         quality={100}
       />
@@ -61,7 +66,7 @@ function Hero() {
             Visionaries
           </span>
         </h1>
-        <p className="text-sm md:text-base max-w-[375px] md:max-w-[1000px]">
+        <p className="text-sm md:text-base xl:text-lg max-w-[375px] md:max-w-[1000px]">
           Secure Your Animal Astronaut NFT built upon the Unit Network
           <br className="hidden md:block" />
           and Elevate Your Position in the Universe
@@ -69,15 +74,38 @@ function Hero() {
         <div className="flex justify-center w-full">
           <div className="grid grid-cols-3 w-fit gap-6 md:gap-12 mt-8 md:mt-16 ml-0 md:ml-4 font-outfit">
             <div className="flex-col items-center w-fit">
-              <h2 className="font-bold text-3xl md:text-4xl">365</h2>
+              <CountUp start={100} end={365} delay={0}>
+                {({ countUpRef }) => (
+                  <span
+                    className="font-bold text-3xl md:text-4xl"
+                    ref={countUpRef}
+                  />
+                )}
+              </CountUp>
               <p className="text-xs md:text-sm">Astronauts</p>
             </div>
-            <div className="flex-col items-center w-fit ml-2">
-              <h2 className="font-bold text-3xl md:text-4xl">365</h2>
-              <p className="text-xs md:text-sm">Days</p>
+            <div className="flex-col items-center w-fit ml-3 md:ml-2">
+              <CountUp start={100} end={365} delay={0}>
+                {({ countUpRef }) => (
+                  <span
+                    className="font-bold text-3xl md:text-4xl"
+                    ref={countUpRef}
+                  />
+                )}
+              </CountUp>
+              <p className="text-xs md:text-sm text-start ml-3 md:ml-[14px]">
+                Days
+              </p>
             </div>
             <div className="flex-col items-center w-fit">
-              <h2 className="font-bold text-3xl md:text-4xl">360</h2>
+              <CountUp start={100} end={360} delay={0}>
+                {({ countUpRef }) => (
+                  <span
+                    className="font-bold text-3xl md:text-4xl"
+                    ref={countUpRef}
+                  />
+                )}
+              </CountUp>
               <p className="text-xs md:text-sm">Elite Members</p>
             </div>
           </div>

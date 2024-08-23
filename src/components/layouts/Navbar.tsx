@@ -5,17 +5,36 @@ import { Sheet, SheetClose, SheetContent, SheetTrigger } from "../ui/sheet";
 import { HambergerMenu } from "iconsax-react";
 import Link from "next/link";
 import { Button } from "../ui/button";
-import { usePathname } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
+import { useScroll } from "@/context/ScrollContext";
 
 function Navbar() {
+  const router = useRouter();
   const pathname = usePathname();
+  const scroll = useScroll();
+
+  const handleHomeClick = () => {
+    if (pathname === "/") {
+      scroll?.scrollToHero();
+    } else {
+      router.push("/");
+    }
+  };
+
+  const handleAboutClick = () => {
+    if (pathname === "/") {
+      scroll?.scrollToAbout();
+    } else {
+      router.push("/#about");
+    }
+  };
 
   return (
     <Sheet>
       <nav className="fixed left-0 top-0 z-40 w-screen">
         <div className="mx-auto flex w-full max-w-screen-2xl items-center px-6 py-6 transition-all md:px-16">
           <div className="mr-auto flex items-center gap-x-3">
-            <div className="relative cursor-pointer">
+            <div className="relative">
               <Image
                 src="/images/logo/logo-type-purple.svg"
                 alt="Animal Astronauts"
@@ -35,19 +54,24 @@ function Navbar() {
             </div>
           </div>
           <div className="hidden items-center gap-x-8 lg:flex">
-            {pathname === "/" ? (
-              <Button
-                variant="glassmorphism"
-                className="relative inline-block overflow-hidden"
-              >
-                <span className="relative z-10">Home</span>
-                <div className="w-12 h-16 absolute inset-0 z-0 rounded-lg bg-[#5C33FF] blur-lg opacity-80 left-1/2 transform -translate-x-1/2" />
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-10 h-0.5 bg-unit-purple-30" />
-              </Button>
-            ) : (
-              <Button variant="glassmorphism">Home</Button>
-            )}
-            <Button variant="glassmorphism">About</Button>
+            <Button
+              variant="glassmorphism"
+              className="relative inline-block overflow-hidden"
+              onClick={handleHomeClick}
+            >
+              {pathname === "/" ? (
+                <>
+                  <span className="relative z-10">Home</span>
+                  <div className="w-12 h-16 absolute inset-0 z-0 rounded-lg bg-[#5C33FF] blur-lg opacity-80 left-1/2 transform -translate-x-1/2" />
+                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-10 h-0.5 bg-unit-purple-30" />
+                </>
+              ) : (
+                <span>Home</span>
+              )}
+            </Button>
+            <Button variant="glassmorphism" onClick={handleAboutClick}>
+              About
+            </Button>
             <Button variant="glassmorphism">Application</Button>
             <Link href="/collection">
               <Button variant="gradient">Collection</Button>
@@ -64,12 +88,12 @@ function Navbar() {
         <ul className="mt-12 flex flex-col items-end justify-start gap-y-6 font-poppins text-xl font-semibold z-50">
           <li>
             <SheetClose>
-              <div>Home</div>
+              <div onClick={handleHomeClick}>Home</div>
             </SheetClose>
           </li>
           <li>
             <SheetClose>
-              <div>About</div>
+              <div onClick={handleAboutClick}>About</div>
             </SheetClose>
           </li>
           <li>

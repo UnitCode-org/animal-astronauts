@@ -1,9 +1,10 @@
 import Image from "next/image";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 function Steps() {
   return (
-    <section className="z-20 relative max-w-screen-2xl w-full px-8 md:px-16 mt-36">
+    <section className="z-20 relative max-w-screen-2xl w-full px-8 md:px-16 mt-44">
       <Image
         src="/images/decoration/glow.svg"
         alt="glow"
@@ -17,24 +18,6 @@ function Steps() {
         width={800}
         height={800}
         className="absolute z-30 -right-96 -bottom-56 hidden md:block animate-pulse-slow"
-      />
-      <Image
-        src="/images/decoration/stars.svg"
-        alt="stars"
-        layout="responsive"
-        width={100}
-        height={30}
-        objectFit="cover"
-        className="w-full absolute z-20 -mt-36"
-      />
-      <Image
-        src="/images/decoration/stars.svg"
-        alt="stars"
-        layout="responsive"
-        width={100}
-        height={30}
-        objectFit="cover"
-        className="w-full absolute z-20 bottom-0"
       />
 
       <div className="relative z-30">
@@ -71,12 +54,13 @@ function Steps() {
             </h4>
             <p className="text-unit-gray-10 text-center lg:text-start text-sm lg:text-base">
               <span className="font-semibold">
-                You're not just joining a club—
+                You&apos;re not just joining a club—
               </span>
-              you're becoming part of a close-knit group of 360 individuals who
-              are redefining what's possible. This is your chance to connect
-              with like-minded pioneers, engage in high-level conversations, and
-              unlock doors to opportunities that can propel you to new heights.
+              you&apos;re becoming part of a close-knit group of 360 individuals
+              who are redefining what&apos;s possible. This is your chance to
+              connect with like-minded pioneers, engage in high-level
+              conversations, and unlock doors to opportunities that can propel
+              you to new heights.
             </p>
           </div>
         </div>
@@ -86,14 +70,16 @@ function Steps() {
               Membership Requirements
             </h4>
             <p className="text-center lg:text-end text-sm lg:text-base text-unit-gray-10">
-              To embark on this journey, you'll need to hold $1,000 worth of
-              UNIT Tokens on the Unit Network App. These tokens are more than
+              To embark on this journey, you&apos;ll need to hold $1,000 worth
+              of UNIT Tokens on the Unit Network App. These tokens are more than
               just an asset—they are your entry pass into a world where
               innovation meets exclusivity.
             </p>
-            <Button variant="gradient" className="mt-4">
-              Unit Network
-            </Button>
+            <Link href="https://unit.network/" target="_blank">
+              <Button variant="gradient" className="mt-4">
+                Unit Network
+              </Button>
+            </Link>
           </div>
           <Image
             src="/images/steps/step-2.svg"
@@ -113,7 +99,7 @@ function Steps() {
             <h4 className="mb-4 text-4xl font-medium font-outfit text-center lg:text-start">
               Application Process
             </h4>
-            <p className="text-center lg:text-start max-w-[600px] mx-auto mb-24 text-unit-gray-10 text-sm lg:text-base">
+            <p className="text-center lg:text-start max-w-[600px] mx-auto mb-12xs lg:mb-24 text-unit-gray-10 text-sm lg:text-base">
               We believe in curating a community that aligns with our vision.
               After securing your tokens, you are invited to complete a brief,
               10-question application. This is our way of getting to know you,

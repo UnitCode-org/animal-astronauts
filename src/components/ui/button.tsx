@@ -9,7 +9,8 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-white text-black hover:bg-unit-blue-50 hover:text-white",
+        default:
+          "bg-white text-unit-blue-50 hover:bg-unit-blue-50 hover:text-white",
         gradient:
           "bg-gradient-to-b from-[#9152F7] to-[#684DFD] text-white hover:bg-gradient-to-b hover:from-[#7a42db] hover:to-[#563ccc]",
         glassmorphism: "bg-white/15 backdrop-blur text-white hover:bg-white/30",

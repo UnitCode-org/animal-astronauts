@@ -2,7 +2,6 @@
 
 import useEmblaCarousel from "embla-carousel-react";
 import OpportunitiesCard from "../ui/opportunitiesCard";
-import Image from "next/image";
 
 function Opportunities() {
   const [emblaRef] = useEmblaCarousel({
@@ -12,18 +11,8 @@ function Opportunities() {
   });
 
   return (
-    <section className="z-20 relative max-w-screen-2xl w-full md:px-16 mt-36 mb-48">
-      <Image
-        src="/images/decoration/stars.svg"
-        alt="stars"
-        layout="responsive"
-        width={100}
-        height={30}
-        objectFit="cover"
-        className="w-full absolute z-20 -mt-36"
-      />
-
-      <h1 className="text-4xl lg:text-5xl font-bold mb-20 font-outfit text-center px-8 md:px-0 relative z-30">
+    <section className="z-20 relative max-w-screen-2xl w-full md:px-16 mt-40 mb-56">
+      <h1 className="text-4xl lg:text-5xl font-bold mb-16 lg:mb-20 font-outfit text-center px-8 md:px-0 relative z-30">
         A World of Exclusive Opportunities
       </h1>
       <div
@@ -36,6 +25,7 @@ function Opportunities() {
               image="opportunities-1"
               title="Connect and Innovate"
               description="Exclusive Industry Events"
+              additionalInfo="Participate in leading blockchain and tech events where industry pioneers gather to shape the future"
             />
           </div>
           <div className="flex-shrink-0 px-4 lg:px-6">
@@ -43,6 +33,7 @@ function Opportunities() {
               image="opportunities-2"
               title="Stay Ahead of the Curve"
               description="Cutting-edge Conferences"
+              additionalInfo="Engage in high-level discussions and gain insights from the most influential voices in technology and innovation"
             />
           </div>
           <div className="flex-shrink-0 px-4 lg:px-6">
@@ -50,6 +41,7 @@ function Opportunities() {
               image="opportunities-3"
               title="Global Networking"
               description="Expand Your Network Horizons"
+              additionalInfo="Network with visionaries and leaders from around the world, and be part of the conversations that drive industry change"
             />
           </div>
           <div className="flex-shrink-0 px-4 lg:px-6">
@@ -57,6 +49,7 @@ function Opportunities() {
               image="opportunities-4"
               title="Be Where it Matters"
               description="Exclusive Access to Key Events"
+              additionalInfo="Attend select, high-impact events that are crucial to the evolution of blockchain and technology"
             />
           </div>
         </div>

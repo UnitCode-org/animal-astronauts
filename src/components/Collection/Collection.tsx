@@ -6,7 +6,7 @@ import Image from "next/image";
 import { ArrowDown2 } from "iconsax-react";
 import { animalsFilter } from "@/data/animalsFilter";
 import { citiesFilter } from "@/data/citiesFilter";
-import { allCollection } from "@/data/collection";
+import { allCollection } from "@/data/allCollection";
 
 function Collection() {
   const [filteredCollection, setFilteredCollection] = useState(allCollection);

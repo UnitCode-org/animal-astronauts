@@ -39,8 +39,9 @@ function About() {
             <div className="flex">
               <div className="flex-shrink-0 px-4">
                 <CollectionCard
-                  image="moe-new-york-3"
-                  name="Moe in New York"
+                  image="1-moe-new-york"
+                  name="Moe"
+                  city="New York"
                   number="1"
                   variant="large"
                   className="relative z-30"
@@ -48,8 +49,9 @@ function About() {
               </div>
               <div className="flex-shrink-0 px-4">
                 <CollectionCard
-                  image="moe-new-york"
-                  name="Moe in New York"
+                  image="2-john-beijing"
+                  name="John"
+                  city="Beijing"
                   number="2"
                   variant="large"
                   className="relative z-30"
@@ -57,8 +59,9 @@ function About() {
               </div>
               <div className="flex-shrink-0 px-4">
                 <CollectionCard
-                  image="moe-new-york-2"
-                  name="Moe in New York"
+                  image="3-ava-abu-dhabi"
+                  name="Ava"
+                  city="Abu Dhabi"
                   number="3"
                   variant="large"
                   className="relative z-30"
@@ -68,22 +71,25 @@ function About() {
           </div>
           <div className="hidden md:flex gap-x-6 lg:gap-x-8 justify-center relative -mx-20">
             <CollectionCard
-              image="moe-new-york-3"
-              name="Moe in New York"
+              image="1-moe-new-york"
+              name="Moe"
+              city="New York"
               number="1"
               variant="large"
               className="relative z-30 -ml-12"
             />
             <CollectionCard
-              image="moe-new-york"
-              name="Moe in New York"
+              image="2-john-beijing"
+              name="John"
+              city="Beijing"
               number="2"
               variant="large"
               className="relative z-30 md:-translate-y-8"
             />
             <CollectionCard
-              image="moe-new-york-2"
-              name="Moe in New York"
+              image="3-ava-abu-dhabi"
+              name="Ava"
+              city="Abu Dhabi"
               number="3"
               variant="large"
               className="relative z-30 -mr-12"

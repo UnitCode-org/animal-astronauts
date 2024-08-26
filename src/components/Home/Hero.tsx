@@ -32,17 +32,19 @@ function Hero() {
         quality={100}
       />
       <Image
-        src="/images/hero/token-hero.svg"
+        src="/images/hero/token-hero.webp"
         alt="token"
         width={350}
         height={350}
+        quality={100}
         className="absolute h-auto -right-16 md:right-4 xl:right-10 top-4 md:top-10 z-10 size-[175px] md:size-[250px] xl:size-[350px]"
       />
       <Image
-        src="/images/hero/rocket.svg"
+        src="/images/hero/rocket.webp"
         alt="rocket"
         width={500}
         height={500}
+        quality={100}
         className="absolute h-auto -left-20 md:left-0 top-80 md:top-1/2 z-10 size-[200px] md:size-[300px] xl:size-[500px]"
       />
 

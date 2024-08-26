@@ -4,6 +4,7 @@ import clsx from "clsx";
 type CollectionCardProps = {
   image: string;
   name: string;
+  city: string;
   number: string;
   variant?: "default" | "large";
   className?: string;
@@ -16,6 +17,7 @@ function cn(...classes: (string | undefined)[]) {
 const CollectionCard: React.FC<CollectionCardProps> = ({
   image,
   name,
+  city,
   number,
   variant = "default",
   className,
@@ -27,14 +29,16 @@ const CollectionCard: React.FC<CollectionCardProps> = ({
   return (
     <div className={cn(baseClasses, sizeClasses, className)}>
       <Image
-        src={`/images/collection/${image}.svg`}
+        src={`/images/collection/${image}.webp`}
         alt={name}
         width={200}
         height={200}
         className="rounded-3xl w-full"
       />
       <div className="flex items-center justify-between gap-2">
-        <h3 className="text-left py-2 pl-4 text-sm md:text-base">{name}</h3>
+        <h3 className="text-left py-2 pl-4 text-sm md:text-base">
+          {name} in {city}
+        </h3>
         <div className="rounded-full px-4 py-1.5 bg-unit-purple-30 m-4 text-xs">
           #{number}
         </div>

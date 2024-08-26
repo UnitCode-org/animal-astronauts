@@ -43,7 +43,7 @@ function Steps() {
         </p>
         <div className="flex flex-col lg:flex-row items-center justify-center gap-x-2 mb-20 lg:mr-[240px]">
           <Image
-            src="/images/steps/step-1.svg"
+            src="/images/steps/step-1.webp"
             alt="step1"
             width={250}
             height={250}
@@ -82,7 +82,7 @@ function Steps() {
             </Link>
           </div>
           <Image
-            src="/images/steps/step-2.svg"
+            src="/images/steps/step-2.webp"
             alt="step1"
             width={250}
             height={250}
@@ -90,7 +90,7 @@ function Steps() {
         </div>
         <div className="flex flex-col lg:flex-row items-center justify-center gap-x-2 lg:mr-[240px]">
           <Image
-            src="/images/steps/step-3.svg"
+            src="/images/steps/step-3.webp"
             alt="step1"
             width={250}
             height={250}

@@ -1,9 +1,10 @@
+import Collection from "@/components/Collection/Collection";
 import Layout from "@/components/layouts/Layout";
 
-export default function Collection() {
+export default function CollectionPage() {
   return (
     <Layout>
-      <div className="w-screen min-h-screen flex items-center">Collection</div>
+      <Collection />
     </Layout>
   );
 }

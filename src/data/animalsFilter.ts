@@ -2,47 +2,58 @@ import { CollectionFilter } from "@/types/CollectionFilter";
 
 export const animalsFilter: CollectionFilter[] = [
   {
-    name: "Dog",
+    name: "Moe",
+    type: "Dog",
     total: 30,
   },
   {
-    name: "Cat",
+    name: "Maria",
+    type: "Cat",
     total: 30,
   },
   {
-    name: "Elephant",
+    name: "Noah",
+    type: "Elephant",
     total: 30,
   },
   {
-    name: "Horse",
+    name: "Liam",
+    type: "Horse",
     total: 30,
   },
   {
-    name: "Dolphin",
+    name: "Sophia",
+    type: "Dolphin",
     total: 30,
   },
   {
-    name: "Koala",
+    name: "Isabella",
+    type: "Koala",
     total: 30,
   },
   {
-    name: "Penguin",
+    name: "Ava",
+    type: "Penguin",
     total: 30,
   },
   {
-    name: "Panda",
+    name: "Emma",
+    type: "Panda",
     total: 30,
   },
   {
-    name: "Monkey",
+    name: "Olivia",
+    type: "Monkey",
     total: 30,
   },
   {
-    name: "Tiger",
+    name: "James",
+    type: "Tiger",
     total: 30,
   },
   {
-    name: "Fox",
+    name: "William",
+    type: "Fox",
     total: 30,
   },
-].sort((a, b) => a.name.localeCompare(b.name));
+].sort((a, b) => a.type.localeCompare(b.type));

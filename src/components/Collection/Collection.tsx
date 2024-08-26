@@ -58,7 +58,7 @@ function Collection() {
 
         <div className="w-full mt-8">
           <div
-            className={`flex justify-between items-center font-medium mb-4 cursor-pointer text-lg font-outfit ${
+            className={`flex justify-between items-center font-medium mb-4 cursor-pointer text-xl font-outfit ${
               activeOption === "All Categories" ? "text-white" : "text-gray-400"
             }`}
             onClick={() => handleOptionClick("All Categories")}
@@ -68,12 +68,12 @@ function Collection() {
           </div>
           <div className="mb-4">
             <div
-              className="flex justify-between items-center text-gray-400 font-medium mb-2 cursor-pointer text-lg font-outfit"
+              className="flex justify-between items-center text-gray-400 font-medium mb-2 cursor-pointer text-xl font-outfit"
               onClick={() => setShowAnimals(!showAnimals)}
             >
               <span>Animals</span>
               <ArrowDown2
-                size="22"
+                size="26"
                 color="#6B7280"
                 className={`mb-1 transition-transform duration-200 ${
                   showAnimals ? "rotate-180" : "rotate-0"
@@ -84,7 +84,7 @@ function Collection() {
               animalsFilter.map((animal) => (
                 <div
                   key={animal.name}
-                  className={`flex justify-between items-center p-2 pl-0 cursor-pointer font-medium ${
+                  className={`flex justify-between items-center py-2 cursor-pointer font-medium ${
                     activeOption === animal.name
                       ? "text-white"
                       : "text-gray-400"
@@ -92,7 +92,7 @@ function Collection() {
                   onClick={() => handleOptionClick(animal.name)}
                 >
                   <span className="flex justify-between w-full">
-                    {animal.name}{" "}
+                    {animal.type} ({animal.name})
                     <span className="ml-auto pl-2">{animal.total}</span>
                   </span>
                 </div>
@@ -101,12 +101,12 @@ function Collection() {
 
           <div>
             <div
-              className="flex justify-between items-center text-gray-400 font-medium mb-2 cursor-pointer text-lg font-outfit"
+              className="flex justify-between items-center text-gray-400 font-medium mb-2 cursor-pointer text-xl font-outfit"
               onClick={() => setShowCities(!showCities)}
             >
               <span>Cities</span>
               <ArrowDown2
-                size="22"
+                size="26"
                 color="#6B7280"
                 className={`mb-1 transition-transform duration-200 ${
                   showCities ? "rotate-180" : "rotate-0"
@@ -117,7 +117,7 @@ function Collection() {
               citiesFilter.map((city) => (
                 <div
                   key={city.name}
-                  className={`flex justify-between items-center p-2 pl-0 cursor-pointer font-medium ${
+                  className={`flex justify-between items-center py-2 cursor-pointer font-medium ${
                     activeOption === city.name ? "text-white" : "text-gray-400"
                   }`}
                   onClick={() => handleOptionClick(city.name)}

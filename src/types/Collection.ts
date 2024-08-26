@@ -1,7 +1,7 @@
-export interface NFT {
+export interface Collection {
   number: number;
   name: string;
   image: string;
-  animalType: string;
+  type: string;
   city: string;
 }

@@ -1,5 +1,10 @@
-export interface CollectionFilter {
+export interface AnimalCollectionFilter {
   name: string;
-  type?: string;
+  type: string;
+  total: number;
+}
+
+export interface CityCollectionFilter {
+  name: string;
   total: number;
 }

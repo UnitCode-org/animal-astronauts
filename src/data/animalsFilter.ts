@@ -1,6 +1,6 @@
-import { CollectionFilter } from "@/types/CollectionFilter";
+import { AnimalCollectionFilter } from "@/types/CollectionFilter";
 
-export const animalsFilter: CollectionFilter[] = [
+export const animalsFilter: AnimalCollectionFilter[] = [
   {
     name: "Moe",
     type: "Dog",

@@ -1,6 +1,6 @@
-import { CollectionFilter } from "@/types/CollectionFilter";
+import { CityCollectionFilter } from "@/types/CollectionFilter";
 
-export const citiesFilter: CollectionFilter[] = [
+export const citiesFilter: CityCollectionFilter[] = [
   {
     name: "Hong Kong",
     total: 0,

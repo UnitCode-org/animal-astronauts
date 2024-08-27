@@ -7,6 +7,7 @@ import { ArrowDown2 } from "iconsax-react";
 import { animalsFilter } from "@/data/animalsFilter";
 import { citiesFilter } from "@/data/citiesFilter";
 import { allCollection } from "@/data/allCollection";
+import CollectionCard from "../ui/collectionCard";
 
 function Collection() {
   const [filteredCollection, setFilteredCollection] = useState(allCollection);
@@ -85,11 +86,11 @@ function Collection() {
                 <div
                   key={animal.name}
                   className={`flex justify-between items-center py-2 cursor-pointer font-medium ${
-                    activeOption === animal.name
+                    activeOption === animal.type
                       ? "text-white"
                       : "text-gray-400"
                   }`}
-                  onClick={() => handleOptionClick(animal.name)}
+                  onClick={() => handleOptionClick(animal.type)}
                 >
                   <span className="flex justify-between w-full">
                     {animal.type} ({animal.name})
@@ -131,7 +132,14 @@ function Collection() {
           </div>
         </div>
       </div>
-      <div className="col-span-2 relative z-30"></div>
+      <div className="col-span-2 relative z-30">
+        {/* <CollectionCard
+          image={allCollection[0].image}
+          name={allCollection[0].name}
+          city={allCollection[0].city}
+          number={allCollection[0].number}
+        /> */}
+      </div>
     </section>
   );
 }

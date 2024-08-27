@@ -5,7 +5,7 @@ type CollectionCardProps = {
   image: string;
   name: string;
   city: string;
-  number: string;
+  number: Number;
   variant?: "default" | "large";
   className?: string;
 };
@@ -40,7 +40,7 @@ const CollectionCard: React.FC<CollectionCardProps> = ({
           {name} in {city}
         </h3>
         <div className="rounded-full px-4 py-1.5 bg-unit-purple-30 m-4 text-xs">
-          #{number}
+          #{number.toString()}
         </div>
       </div>
     </div>

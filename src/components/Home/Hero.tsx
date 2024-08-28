@@ -18,10 +18,11 @@ function Hero() {
     >
       <Image
         src="/images/hero/main-glow.svg"
-        alt="lightbeam"
+        alt="main-glow"
         width={200}
         height={200}
         className="absolute z-20 w-screen h-full animate-pulse-slow left-1/2 transform -translate-x-1/2"
+        priority={true}
       />
       <Image
         src="/images/hero/lightbeam.svg"
@@ -29,23 +30,22 @@ function Hero() {
         fill
         className="absolute z-20 scale-[3] md:scale-[2] origin-center animate-pulse-slow object-contain"
         priority={true}
-        quality={100}
       />
       <Image
         src="/images/hero/token-hero.webp"
         alt="token"
         width={350}
         height={350}
-        quality={100}
         className="absolute h-auto -right-16 md:right-4 xl:right-10 top-4 md:top-10 z-10 size-[175px] md:size-[250px] xl:size-[350px]"
+        priority={true}
       />
       <Image
         src="/images/hero/rocket.webp"
         alt="rocket"
         width={500}
         height={500}
-        quality={100}
         className="absolute h-auto -left-20 md:left-0 top-80 md:top-1/2 z-10 size-[200px] md:size-[300px] xl:size-[500px]"
+        priority={true}
       />
 
       <div className="mb-32 lg:mb-0 text-center px-4 z-30">

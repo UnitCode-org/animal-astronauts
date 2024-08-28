@@ -90,7 +90,7 @@ export const allCollection: Collection[] = [
     name: "Liam",
     image: "13-liam-hongkong",
     type: "Horse",
-    city: "Hongkong",
+    city: "Hong Kong",
   },
   {
     number: 14,
@@ -349,7 +349,7 @@ export const allCollection: Collection[] = [
     name: "Moe",
     image: "50-moe-rocket",
     type: "Dog",
-    city: "Others",
+    city: "Rocket",
   },
   {
     number: 51,
@@ -699,7 +699,7 @@ export const allCollection: Collection[] = [
     name: "Maria",
     image: "100-maria-planet",
     type: "Cat",
-    city: "Others",
+    city: "Planet",
   },
   {
     number: 101,
@@ -965,7 +965,7 @@ export const allCollection: Collection[] = [
     name: "Maria",
     image: "138-maria-hongkong",
     type: "Cat",
-    city: "Hongkong",
+    city: "Hong Kong",
   },
   {
     number: 139,
@@ -979,7 +979,7 @@ export const allCollection: Collection[] = [
     name: "William",
     image: "140-william-hongkong",
     type: "Fox",
-    city: "Hongkong",
+    city: "Hong Kong",
   },
   {
     number: 141,
@@ -1294,7 +1294,7 @@ export const allCollection: Collection[] = [
     name: "Moe",
     image: "185-moe-hongkong",
     type: "Dog",
-    city: "Hongkong",
+    city: "Hong Kong",
   },
   {
     number: 186,
@@ -1399,7 +1399,7 @@ export const allCollection: Collection[] = [
     name: "Ava",
     image: "200-ava-ufo",
     type: "Penguin",
-    city: "Others",
+    city: "UFO",
   },
   {
     number: 201,
@@ -1434,7 +1434,7 @@ export const allCollection: Collection[] = [
     name: "James",
     image: "205-james-hongkong",
     type: "Tiger",
-    city: "Hongkong",
+    city: "Hong Kong",
   },
   {
     number: 206,
@@ -1469,7 +1469,7 @@ export const allCollection: Collection[] = [
     name: "Olivia",
     image: "210-olivia-hongkong",
     type: "Monkey",
-    city: "Hongkong",
+    city: "Hong Kong",
   },
   {
     number: 211,
@@ -2099,7 +2099,7 @@ export const allCollection: Collection[] = [
     name: "John",
     image: "300-john-wave",
     type: "Lion",
-    city: "Others",
+    city: "Wave",
   },
   {
     number: 301,
@@ -2554,6 +2554,6 @@ export const allCollection: Collection[] = [
     name: "William",
     image: "365-william-futuristic-city",
     type: "Fox",
-    city: "Others",
+    city: "Futuristic City",
   },
 ];

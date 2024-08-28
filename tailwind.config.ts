@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      fontSize: {
+        "2xs": "0.625rem",
+      },
       fontFamily: {
         inter: ["var(--font-inter)", "sans-serif"],
         outfit: ["var(--font-outfit)", "sans-serif"],
@@ -85,6 +88,7 @@ const config = {
         "pulse-slow": "pulse 5s linear infinite",
       },
       screens: {
+        xs: "350px",
         sm: "625px",
         "3xl": "1750px",
       },

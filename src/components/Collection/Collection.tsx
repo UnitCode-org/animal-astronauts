@@ -1,33 +1,52 @@
 "use client";
 
-import { useState } from "react";
-import SearchInput from "../ui/searchInput";
+import { useEffect, useState } from "react";
 import Image from "next/image";
-import { ArrowDown2 } from "iconsax-react";
 import { animalsFilter } from "@/data/animalsFilter";
 import { citiesFilter } from "@/data/citiesFilter";
 import { allCollection } from "@/data/allCollection";
-import CollectionCard from "../ui/collectionCard";
+import Filters from "./Filters";
+import CollectionList from "./CollectionList";
+import "@/styles/scrollbar.css";
 
 function Collection() {
   const [filteredCollection, setFilteredCollection] = useState(allCollection);
 
   const [searchText, setSearchText] = useState("");
 
+  const [activeOption, setActiveOption] = useState("All Categories");
+
   const handleInputChange = (inputValue: string) => {
     setSearchText(inputValue);
   };
 
-  const [activeOption, setActiveOption] = useState("All Categories");
-  const [showAnimals, setShowAnimals] = useState(false);
-  const [showCities, setShowCities] = useState(false);
+  useEffect(() => {
+    let filtered = allCollection;
 
-  const handleOptionClick = (optionName: string) => {
-    setActiveOption(optionName);
-  };
+    if (activeOption !== "All Categories") {
+      filtered = filtered.filter((item) => {
+        if (animalsFilter.some((animal) => animal.type === activeOption)) {
+          return item.type === activeOption;
+        } else if (citiesFilter.some((city) => city.name === activeOption)) {
+          return item.city === activeOption;
+        }
+        return false;
+      });
+    }
+
+    if (searchText) {
+      filtered = filtered.filter(
+        (item) =>
+          item.name.toLowerCase().includes(searchText.toLowerCase()) ||
+          item.city.toLowerCase().includes(searchText.toLowerCase())
+      );
+    }
+
+    setFilteredCollection(filtered);
+  }, [searchText, activeOption]);
 
   return (
-    <section className="z-20 relative max-w-screen-2xl min-h-screen w-full md:px-16 py-32 grid grid-cols-1 lg:grid-cols-3 gap-16">
+    <section className="z-20 relative max-w-screen-2xl w-full px-4 xs:px-6 md:px-16 py-24 lg:py-32 grid grid-cols-1 lg:grid-cols-3 gap-8 xl:gap-20">
       <Image
         src="/images/decoration/glow.svg"
         alt="glow"
@@ -42,103 +61,15 @@ function Collection() {
         height={800}
         className="absolute z-20 -right-96 top-72 hidden md:block animate-pulse-slow"
       />
-      <div className="col-span-1 relative z-30">
-        <h1 className="font-outfit font-bold text-6xl mb-4">
-          Animal
-          <br />
-          Astronauts
-        </h1>
-        <p className="mb-8">
-          Lorem ipsum dolor sit amet consectetur. Lectus vel nisl justo non
-          risus sit sit. Turpis eu congue dui sed orci.
-        </p>
-        <SearchInput
-          placeholder="Search Animal, City"
-          onInputChange={handleInputChange}
+      <div className="col-span-1 relative z-30 h-fit">
+        <Filters
+          activeOption={activeOption}
+          setActiveOption={setActiveOption}
+          handleInputChange={handleInputChange}
         />
-
-        <div className="w-full mt-8">
-          <div
-            className={`flex justify-between items-center font-medium mb-4 cursor-pointer text-xl font-outfit ${
-              activeOption === "All Categories" ? "text-white" : "text-gray-400"
-            }`}
-            onClick={() => handleOptionClick("All Categories")}
-          >
-            <span>All Categories</span>
-            <span>365</span>
-          </div>
-          <div className="mb-4">
-            <div
-              className="flex justify-between items-center text-gray-400 font-medium mb-2 cursor-pointer text-xl font-outfit"
-              onClick={() => setShowAnimals(!showAnimals)}
-            >
-              <span>Animals</span>
-              <ArrowDown2
-                size="26"
-                color="#6B7280"
-                className={`mb-1 transition-transform duration-200 ${
-                  showAnimals ? "rotate-180" : "rotate-0"
-                }`}
-              />
-            </div>
-            {showAnimals &&
-              animalsFilter.map((animal) => (
-                <div
-                  key={animal.name}
-                  className={`flex justify-between items-center py-2 cursor-pointer font-medium ${
-                    activeOption === animal.type
-                      ? "text-white"
-                      : "text-gray-400"
-                  }`}
-                  onClick={() => handleOptionClick(animal.type)}
-                >
-                  <span className="flex justify-between w-full">
-                    {animal.type} ({animal.name})
-                    <span className="ml-auto pl-2">{animal.total}</span>
-                  </span>
-                </div>
-              ))}
-          </div>
-
-          <div>
-            <div
-              className="flex justify-between items-center text-gray-400 font-medium mb-2 cursor-pointer text-xl font-outfit"
-              onClick={() => setShowCities(!showCities)}
-            >
-              <span>Cities</span>
-              <ArrowDown2
-                size="26"
-                color="#6B7280"
-                className={`mb-1 transition-transform duration-200 ${
-                  showCities ? "rotate-180" : "rotate-0"
-                }`}
-              />
-            </div>
-            {showCities &&
-              citiesFilter.map((city) => (
-                <div
-                  key={city.name}
-                  className={`flex justify-between items-center py-2 cursor-pointer font-medium ${
-                    activeOption === city.name ? "text-white" : "text-gray-400"
-                  }`}
-                  onClick={() => handleOptionClick(city.name)}
-                >
-                  <span className="flex justify-between w-full">
-                    {city.name}{" "}
-                    <span className="ml-auto pl-2">{city.total}</span>
-                  </span>
-                </div>
-              ))}
-          </div>
-        </div>
       </div>
-      <div className="col-span-2 relative z-30">
-        {/* <CollectionCard
-          image={allCollection[0].image}
-          name={allCollection[0].name}
-          city={allCollection[0].city}
-          number={allCollection[0].number}
-        /> */}
+      <div className="col-span-1 lg:col-span-2 relative z-30 lg:max-h-screen lg:overflow-y-scroll overflow-x-clip lg:pr-6 scrollbar-gradient">
+        <CollectionList filteredCollection={filteredCollection} />
       </div>
     </section>
   );

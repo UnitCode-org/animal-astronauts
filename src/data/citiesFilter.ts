@@ -3,259 +3,243 @@ import { CityCollectionFilter } from "@/types/CollectionFilter";
 export const citiesFilter: CityCollectionFilter[] = [
   {
     name: "Hong Kong",
-    total: 0,
+    total: 6,
   },
   {
     name: "Singapore",
-    total: 0,
+    total: 6,
   },
   {
     name: "Bangkok",
-    total: 0,
+    total: 6,
   },
   {
     name: "Jakarta",
-    total: 0,
+    total: 6,
   },
   {
     name: "Seoul",
-    total: 0,
+    total: 6,
   },
   {
     name: "Tokyo",
-    total: 0,
+    total: 6,
   },
   {
     name: "Beijing",
-    total: 0,
+    total: 6,
   },
   {
     name: "Sydney",
-    total: 0,
+    total: 4,
   },
   {
     name: "Shanghai",
-    total: 0,
+    total: 4,
   },
   {
     name: "Kuala Lumpur",
-    total: 0,
+    total: 4,
   },
   {
     name: "Dubai",
-    total: 0,
+    total: 6,
   },
   {
     name: "Mumbai",
-    total: 0,
+    total: 6,
   },
   {
     name: "Abu Dhabi",
-    total: 0,
+    total: 6,
   },
   {
     name: "New Delhi",
-    total: 0,
+    total: 6,
   },
   {
     name: "Beirut",
-    total: 0,
+    total: 5,
   },
   {
     name: "Tel Aviv",
-    total: 0,
+    total: 5,
   },
   {
     name: "Doha",
-    total: 0,
+    total: 5,
   },
   {
     name: "Muscat",
-    total: 0,
+    total: 4,
   },
   {
     name: "Kuwait",
-    total: 0,
+    total: 4,
   },
   {
     name: "Tehran",
-    total: 0,
+    total: 4,
   },
   {
     name: "Los Angeles",
-    total: 0,
+    total: 6,
   },
   {
     name: "San Francisco",
-    total: 0,
+    total: 6,
   },
   {
     name: "New York",
-    total: 0,
+    total: 6,
   },
   {
     name: "Miami",
-    total: 0,
+    total: 6,
   },
   {
     name: "Seattle",
-    total: 0,
+    total: 6,
   },
   {
     name: "Chicago",
-    total: 0,
+    total: 6,
   },
   {
     name: "Boston",
-    total: 0,
+    total: 6,
   },
   {
     name: "Vancouver",
-    total: 0,
+    total: 6,
   },
   {
     name: "Toronto",
-    total: 0,
+    total: 6,
   },
   {
     name: "Atlanta",
-    total: 0,
+    total: 6,
   },
   {
     name: "London",
-    total: 0,
+    total: 6,
   },
   {
     name: "Paris",
-    total: 0,
+    total: 6,
   },
   {
     name: "Berlin",
-    total: 0,
+    total: 6,
   },
   {
     name: "Amsterdam",
-    total: 0,
+    total: 6,
   },
   {
     name: "Barcelona",
-    total: 0,
+    total: 6,
   },
   {
     name: "Milan",
-    total: 0,
+    total: 6,
   },
   {
     name: "Zurich",
-    total: 0,
+    total: 6,
   },
   {
     name: "Munich",
-    total: 0,
+    total: 6,
   },
   {
     name: "Stockholm",
-    total: 0,
+    total: 6,
   },
   {
     name: "Moscow",
-    total: 0,
+    total: 5,
   },
   {
     name: "Cape Town",
-    total: 0,
+    total: 6,
   },
   {
     name: "Cairo",
-    total: 0,
+    total: 6,
   },
   {
     name: "Nairobi",
-    total: 0,
+    total: 6,
   },
   {
     name: "Accra",
-    total: 0,
+    total: 6,
   },
   {
     name: "Casa Blanca",
-    total: 0,
+    total: 5,
   },
   {
     name: "Lagos",
-    total: 0,
+    total: 5,
   },
   {
     name: "Johannesburg",
-    total: 0,
+    total: 6,
   },
   {
     name: "Addis Ababa",
-    total: 0,
+    total: 6,
   },
   {
     name: "Dar es Salem",
-    total: 0,
+    total: 6,
   },
   {
     name: "Algiers",
-    total: 0,
+    total: 6,
   },
   {
     name: "Buenos Aires",
-    total: 0,
+    total: 6,
   },
   {
     name: "Mexico City",
-    total: 0,
+    total: 6,
   },
   {
     name: "Rio",
-    total: 0,
+    total: 6,
   },
   {
     name: "Santiago",
-    total: 0,
+    total: 6,
   },
   {
     name: "Bogota",
-    total: 0,
+    total: 6,
   },
   {
     name: "Lima",
-    total: 0,
+    total: 6,
   },
   {
     name: "Panama City",
-    total: 0,
+    total: 6,
   },
   {
     name: "Kingston",
-    total: 0,
+    total: 6,
   },
   {
     name: "Quito",
-    total: 0,
+    total: 6,
   },
   {
     name: "Puerto Rico",
-    total: 0,
-  },
-  {
-    name: "Muscat",
-    total: 0,
-  },
-  {
-    name: "Kuwait",
-    total: 0,
-  },
-  {
-    name: "Tehran",
-    total: 0,
-  },
-  {
-    name: "Others",
-    total: 5,
+    total: 6,
   },
 ].sort((a, b) => {
   if (a.name === "Others") return 1;

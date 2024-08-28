@@ -1,0 +1,22 @@
+.scrollbar-gradient::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar-gradient::-webkit-scrollbar-track {
+  background-color: #242333;
+  border-radius: 100vh;
+}
+
+.scrollbar-gradient::-webkit-scrollbar-thumb {
+  background: linear-gradient(rgb(145, 82, 247), rgb(86, 73, 255));
+  border-radius: 100vh;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}

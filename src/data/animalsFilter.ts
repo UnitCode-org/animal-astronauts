@@ -4,12 +4,12 @@ export const animalsFilter: AnimalCollectionFilter[] = [
   {
     name: "Moe",
     type: "Dog",
-    total: 30,
+    total: 31,
   },
   {
     name: "Maria",
     type: "Cat",
-    total: 30,
+    total: 31,
   },
   {
     name: "Noah",
@@ -34,7 +34,7 @@ export const animalsFilter: AnimalCollectionFilter[] = [
   {
     name: "Ava",
     type: "Penguin",
-    total: 30,
+    total: 31,
   },
   {
     name: "Emma",
@@ -54,6 +54,11 @@ export const animalsFilter: AnimalCollectionFilter[] = [
   {
     name: "William",
     type: "Fox",
-    total: 30,
+    total: 31,
+  },
+  {
+    name: "John",
+    type: "Lion",
+    total: 31,
   },
 ].sort((a, b) => a.type.localeCompare(b.type));

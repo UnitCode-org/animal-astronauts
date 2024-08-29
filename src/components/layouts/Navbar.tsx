@@ -35,22 +35,24 @@ function Navbar() {
         <div className="mx-auto flex w-full max-w-screen-2xl items-center px-6 py-6 transition-all md:px-16">
           <div className="mr-auto flex items-center gap-x-3">
             <div className="relative">
-              <Image
-                src="/images/logo/logo-type-purple.svg"
-                alt="Animal Astronauts"
-                width={175}
-                height={175}
-                priority={true}
-                className="hidden lg:block h-auto"
-              />
-              <Image
-                src="/images/logo/logo-purple.svg"
-                alt="Animal Astronauts"
-                width={44}
-                height={44}
-                priority={true}
-                className="block lg:hidden h-auto"
-              />
+              <Link href="/">
+                <Image
+                  src="/images/logo/logo-type-purple.svg"
+                  alt="Animal Astronauts"
+                  width={175}
+                  height={175}
+                  priority={true}
+                  className="hidden lg:block h-auto"
+                />
+                <Image
+                  src="/images/logo/logo-purple.svg"
+                  alt="Animal Astronauts"
+                  width={44}
+                  height={44}
+                  priority={true}
+                  className="block lg:hidden h-auto"
+                />
+              </Link>
             </div>
           </div>
           <div className="hidden items-center gap-x-8 lg:flex">
@@ -72,7 +74,7 @@ function Navbar() {
             <Button variant="glassmorphism" onClick={handleAboutClick}>
               About
             </Button>
-            <Button variant="glassmorphism">Application</Button>
+            <Button variant="glassmorphism">Membership</Button>
             <Link href="/collection">
               <Button variant="gradient">Collection</Button>
             </Link>
@@ -98,7 +100,7 @@ function Navbar() {
           </li>
           <li>
             <SheetClose>
-              <div>Application</div>
+              <div>Membership</div>
             </SheetClose>
           </li>
           <li>

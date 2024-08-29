@@ -42,7 +42,7 @@ function Footer() {
           <li onClick={handleAboutClick} className="cursor-pointer">
             About
           </li>
-          <li className="cursor-pointer">Application</li>
+          <li className="cursor-pointer">Membership</li>
           <li>
             <Link href="/collection">Collection</Link>
           </li>

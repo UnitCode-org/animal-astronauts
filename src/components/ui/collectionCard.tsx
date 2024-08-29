@@ -41,7 +41,7 @@ const CollectionCard: React.FC<CollectionCardProps> = ({
             variant === "large" ? "text-sm pl-4" : "text-xs pl-2"
           } sm:text-base`}
         >
-          {name} in {city}
+          {name} {city !== "Limited Edition" && `in ${city}`}
         </h3>
         <div
           className={`rounded-full ${

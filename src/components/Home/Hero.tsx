@@ -68,10 +68,10 @@ function Hero() {
             Visionaries
           </span>
         </h1>
-        <p className="text-sm md:text-base xl:text-lg max-w-[375px] md:max-w-[1000px]">
-          Secure Your Animal Astronaut NFT built upon the Unit Network
-          <br className="hidden md:block" />
-          and Elevate Your Position in the Universe
+        <p className="text-sm md:text-base xl:text-lg max-w-[375px] md:max-w-[550px]">
+          Secure your place among innovators and unlock a world of unique
+          opportunities. Your journey with Animal Astronauts begins here, where
+          each NFT connects you to an elite community with limitless potential.
         </p>
         <div className="flex justify-center w-full">
           <div className="grid grid-cols-3 w-fit gap-6 md:gap-12 mt-8 md:mt-16 ml-0 md:ml-4 font-outfit">

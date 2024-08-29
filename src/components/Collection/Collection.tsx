@@ -8,6 +8,7 @@ import { allCollection } from "@/data/allCollection";
 import Filters from "./Filters";
 import CollectionList from "./CollectionList";
 import "@/styles/scrollbar.css";
+import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 
 function Collection() {
   const [filteredCollection, setFilteredCollection] = useState(allCollection);
@@ -15,6 +16,8 @@ function Collection() {
   const [searchText, setSearchText] = useState("");
 
   const [activeOption, setActiveOption] = useState("All Categories");
+
+  const parallaxSpeed = -150;
 
   const handleInputChange = (inputValue: string) => {
     setSearchText(inputValue);
@@ -46,32 +49,51 @@ function Collection() {
   }, [searchText, activeOption]);
 
   return (
-    <section className="z-20 relative max-w-screen-2xl w-full px-4 xs:px-6 md:px-16 py-24 lg:py-32 grid grid-cols-1 lg:grid-cols-3 gap-8 xl:gap-20">
-      <Image
-        src="/images/decoration/glow.svg"
-        alt="glow"
-        width={500}
-        height={500}
-        className="absolute z-20 -left-64 top-2 hidden md:block animate-pulse-slow"
-      />
-      <Image
-        src="/images/decoration/glow.svg"
-        alt="glow"
-        width={800}
-        height={800}
-        className="absolute z-20 -right-96 top-72 hidden md:block animate-pulse-slow"
-      />
-      <div className="col-span-1 relative z-30 h-fit">
-        <Filters
-          activeOption={activeOption}
-          setActiveOption={setActiveOption}
-          handleInputChange={handleInputChange}
+    <ParallaxProvider>
+      <Parallax
+        speed={parallaxSpeed}
+        className="w-screen inset-0 absolute z-10"
+      >
+        <Image
+          src="/images/decoration/stars.svg"
+          alt="stars"
+          fill
+          className="object-cover hidden lg:block"
         />
-      </div>
-      <div className="col-span-1 lg:col-span-2 relative z-30 lg:max-h-screen lg:overflow-y-scroll overflow-x-clip lg:pr-6 scrollbar-gradient">
-        <CollectionList filteredCollection={filteredCollection} />
-      </div>
-    </section>
+        <Image
+          src="/images/decoration/stars-2.svg"
+          alt="stars"
+          fill
+          className="object-cover lg:hidden"
+        />
+      </Parallax>
+      <section className="z-20 relative max-w-screen-2xl w-full px-4 xs:px-6 md:px-16 py-24 lg:py-32 grid grid-cols-1 lg:grid-cols-3 gap-8 xl:gap-20">
+        <Image
+          src="/images/decoration/glow.svg"
+          alt="glow"
+          width={500}
+          height={500}
+          className="absolute z-20 -left-64 top-2 hidden md:block animate-pulse-slow"
+        />
+        <Image
+          src="/images/decoration/glow.svg"
+          alt="glow"
+          width={800}
+          height={800}
+          className="absolute z-20 -right-96 top-72 hidden md:block animate-pulse-slow"
+        />
+        <div className="col-span-1 relative z-30 h-fit">
+          <Filters
+            activeOption={activeOption}
+            setActiveOption={setActiveOption}
+            handleInputChange={handleInputChange}
+          />
+        </div>
+        <div className="col-span-1 lg:col-span-2 relative z-30 lg:max-h-screen lg:overflow-y-scroll overflow-x-clip lg:pr-6 scrollbar-gradient">
+          <CollectionList filteredCollection={filteredCollection} />
+        </div>
+      </section>
+    </ParallaxProvider>
   );
 }
 

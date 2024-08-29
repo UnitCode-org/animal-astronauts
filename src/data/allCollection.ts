@@ -346,10 +346,10 @@ export const allCollection: Collection[] = [
   },
   {
     number: 50,
-    name: "Moe",
+    name: "Cosmic Commander Moe",
     image: "50-moe-rocket",
     type: "Dog",
-    city: "Rocket",
+    city: "Limited Edition",
   },
   {
     number: 51,
@@ -696,10 +696,10 @@ export const allCollection: Collection[] = [
   },
   {
     number: 100,
-    name: "Maria",
+    name: "Galactic Voyager Maria",
     image: "100-maria-planet",
     type: "Cat",
-    city: "Planet",
+    city: "Limited Edition",
   },
   {
     number: 101,
@@ -1396,10 +1396,10 @@ export const allCollection: Collection[] = [
   },
   {
     number: 200,
-    name: "Ava",
+    name: "Interstellar Scout Ava",
     image: "200-ava-ufo",
     type: "Penguin",
-    city: "UFO",
+    city: "Limited Edition",
   },
   {
     number: 201,
@@ -2096,10 +2096,10 @@ export const allCollection: Collection[] = [
   },
   {
     number: 300,
-    name: "John",
+    name: "Dimensional Explorer John",
     image: "300-john-wave",
     type: "Lion",
-    city: "Wave",
+    city: "Limited Edition",
   },
   {
     number: 301,
@@ -2551,9 +2551,9 @@ export const allCollection: Collection[] = [
   },
   {
     number: 365,
-    name: "William",
+    name: "Future Frontier William",
     image: "365-william-futuristic-city",
     type: "Fox",
-    city: "Futuristic City",
+    city: "Limited Edition",
   },
 ];

@@ -30,7 +30,10 @@ function Collection() {
       filtered = filtered.filter((item) => {
         if (animalsFilter.some((animal) => animal.type === activeOption)) {
           return item.type === activeOption;
-        } else if (citiesFilter.some((city) => city.name === activeOption)) {
+        } else if (
+          citiesFilter.some((city) => city.name === activeOption) ||
+          activeOption === "Limited Edition"
+        ) {
           return item.city === activeOption;
         }
         return false;

@@ -241,12 +241,12 @@ export const citiesFilter: CityCollectionFilter[] = [
     name: "Puerto Rico",
     total: 6,
   },
-  {
-    name: "Limited Edition",
-    total: 5,
-  },
+  // {
+  //   name: "Limited Edition",
+  //   total: 5,
+  // },
 ].sort((a, b) => {
-  if (a.name === "Limited Edition") return 1;
-  if (b.name === "Limited Edition") return -1;
+  // if (a.name === "Limited Edition") return 1;
+  // if (b.name === "Limited Edition") return -1;
   return a.name.localeCompare(b.name);
 });

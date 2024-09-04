@@ -92,7 +92,7 @@ const Filters: React.FC<FiltersProps> = ({
                     </div>
                   ))}
               </div>
-              <div>
+              <div className="mb-4">
                 <div
                   className="flex justify-between items-center text-gray-400 font-medium mb-2 cursor-pointer font-outfit"
                   onClick={() => setShowCities(!showCities)}
@@ -123,6 +123,18 @@ const Filters: React.FC<FiltersProps> = ({
                       </span>
                     </div>
                   ))}
+              </div>
+              <div
+                className={`flex justify-between items-center font-medium cursor-pointer font-outfit ${
+                  activeOption === "Limited Edition"
+                    ? "text-white"
+                    : "text-gray-400"
+                }`}
+              >
+                <span onClick={() => setActiveOption("Limited Edition")}>
+                  Limited Edition
+                </span>
+                <span className="mr-1">5</span>
               </div>
             </>
           )}
@@ -170,7 +182,7 @@ const Filters: React.FC<FiltersProps> = ({
                 </div>
               ))}
           </div>
-          <div>
+          <div className="mb-4">
             <div
               className="flex justify-between items-center text-gray-400 font-medium mb-2 cursor-pointer text-xl font-outfit"
               onClick={() => setShowCities(!showCities)}
@@ -199,6 +211,17 @@ const Filters: React.FC<FiltersProps> = ({
                   </span>
                 </div>
               ))}
+          </div>
+          <div
+            className={`flex justify-between items-center font-medium mb-4 cursor-pointer text-xl font-outfit ${
+              activeOption === "Limited Edition"
+                ? "text-white"
+                : "text-gray-400"
+            }`}
+            onClick={() => setActiveOption("Limited Edition")}
+          >
+            <span>Limited Edition</span>
+            <span>5</span>
           </div>
         </div>
       </div>
